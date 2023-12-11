@@ -1,0 +1,86 @@
+body {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "box"
+        "footer";
+    grid-template-columns: auto ;
+    grid-template-rows: auto 30px 30px;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(54, 61, 135);
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.box {
+    display: flex; 
+    flex-wrap: wrap; 
+    grid-area: box;
+    justify-content:center; 
+ 
+    gap: 20px;
+    
+}
+
+.fils {
+
+
+    display: grid;
+    grid-template-areas: 
+        "image image"
+        "titre titre"
+        "auteur auteur"
+        "view original";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 40px 40px 50px;
+    border: solid black 1px;
+    background-color: white;
+   
+}
+
+.image {
+    grid-area: image;
+}
+
+.titre {
+    grid-area: titre;
+    font-size: 20px;
+}
+
+.auteur {
+    grid-area: auteur;
+    font-size: 20px;
+}
+
+.contentbouton {
+    padding-left: 40px;
+    grid-area: view;
+}
+
+.titreO {
+    grid-area: original;
+    text-align: end;
+    padding-right: 40px;
+    font-size: 20px;
+}
+
+.boutton {
+    position: absolute;
+    font-size: 20px;
+    background-color: white;
+}
+
+.fils:hover{
+    scale: 1.1;
+    z-index: 90;
+}
